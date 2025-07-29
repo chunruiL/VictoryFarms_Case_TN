@@ -45,7 +45,7 @@ def plot3d_clusters_inner(df, centroids=None, month_number=0, elev=10, azim=-40)
     ax.set_xlabel('Recency', fontsize=13, labelpad=2)
     ax.set_ylabel('Monetary Value', fontsize=13, labelpad=2)
     ax.zaxis.set_label_position('lower')
-    ax.set_zlabel('Frequency', fontsize=13, labelpad=-5)
+    ax.set_zlabel('Frequency', fontsize=13, labelpad=-10)
     
 
     ax.set_xlim3d(1, 0)
@@ -74,7 +74,7 @@ def plot3d_clusters_outer(df, centroids=None, month_number=0, elev=10, azim=-40)
     ax.set_xlabel('Recency', fontsize=13, labelpad=2)
     ax.set_ylabel('Monetary Value', fontsize=13, labelpad=2)
     ax.zaxis.set_label_position('lower')
-    ax.set_zlabel('Frequency', fontsize=13, labelpad=-5)
+    ax.set_zlabel('Frequency', fontsize=13, labelpad=-10)
     
     ax.set_xlim3d(1, 0)
     ax.set_ylim3d(0, 1)
