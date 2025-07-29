@@ -26,7 +26,6 @@ def create_color_map(df, group_column):
     palette = sns.color_palette("coolwarm", len(unique_labels))
     return dict(zip(unique_labels, palette))
 
-# Initialize the color map outside the functions
 color_map_inner = None
 color_map_outer = None
 
@@ -45,7 +44,9 @@ def plot3d_clusters_inner(df, centroids=None, month_number=0, elev=10, azim=-40)
 
     ax.set_xlabel('Recency', fontsize=13, labelpad=2)
     ax.set_ylabel('Monetary Value', fontsize=13, labelpad=2)
-    ax.set_zlabel('Frequency', fontsize=13, labelpad=0.1)
+    ax.zaxis.set_label_position('lower')
+    ax.set_zlabel('Frequency', fontsize=13, labelpad=-5)
+    
 
     ax.set_xlim3d(1, 0)
     ax.set_ylim3d(0, 1)
@@ -72,8 +73,9 @@ def plot3d_clusters_outer(df, centroids=None, month_number=0, elev=10, azim=-40)
 
     ax.set_xlabel('Recency', fontsize=13, labelpad=2)
     ax.set_ylabel('Monetary Value', fontsize=13, labelpad=2)
-    ax.set_zlabel('Frequency', fontsize=13, labelpad=0.1)
-
+    ax.zaxis.set_label_position('lower')
+    ax.set_zlabel('Frequency', fontsize=13, labelpad=-5)
+    
     ax.set_xlim3d(1, 0)
     ax.set_ylim3d(0, 1)
     ax.set_zlim3d(0, 1)
